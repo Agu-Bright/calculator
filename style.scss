@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;1,100;1,200;1,300;1,400;1,700;1,800&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'poppins', san-serif;
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    background-image: linear-gradient(to left bottom, #f16232, #ed2953, #d50078, #a2009b, #3e2cb5);
+    
+    .container{
+        width:25%;
+        height:90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba( 255, 255,255, 0.3 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 6px );
+        -webkit-backdrop-filter: blur( 6px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+        header{
+            height: 10vh;
+            width:100%;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                font-weight: 500;
+                padding-left: 10px;
+                span{
+                    color: #FF4100;
+                }
+            }
+
+            .background-toggle{
+                padding: 5px;
+                text-align: center;
+                background-color: rgb(192, 186, 186);
+                border-radius: 10px;
+                ;
+                i{
+                    padding:5px;
+                }
+
+                #sun{
+                    color:white;
+                    border-radius: 10px;
+                    background-color: black;
+                    
+                }
+            }
+
+            
+        }
+
+        .display{
+            width: 95%;
+            height: 20vh; 
+            background-color: #BEBDC0;
+            background: rgba( 255, 255, 255, 0.3 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 6px );
+            -webkit-backdrop-filter: blur( 6px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #display{
+                font-size: 2em;
+                font-weight: 600;
+                
+            }
+
+            #opr{
+                
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+        }
+
+        .buttons{
+            height: 40vh;
+            width: 95%;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 20px;
+            margin-top: 40px;
+            .grid-item{ 
+                font-weight: 900;
+                width: 100%;
+                padding-top: 9px;
+                text-align: center;
+                
+                cursor: pointer;
+                color:#f16232;
+                background: rgba( 255, 65, 0, 0.15 );
+                border-radius: 5px;
+                backdrop-filter: blur( 9.5px );
+                -webkit-backdrop-filter: blur( 9.5px );
+                border: 1px solid rgba( 255, 255, 255, 0.18 );
+               transition: 0.3s ease;
+            }
+
+            .grid-item:hover{
+                transform: scale(1.07);
+            }
+            .itemH{
+               grid-column: 1/3;
+            }
+            .item1, .item2, .item3, .item4, .item8, .itemC, .itemG, .itemJ{
+                background-color:rgb(241, 98, 50);
+                color: black;
+            }
+        }
+
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    body{
+        width:100%;
+
+        .container{
+            width:70%;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 450px){
+    body{
+        width:100%;
+
+        .container{
+            width:90%;
+            height: 95%;
+        }
+    }
+}
+
